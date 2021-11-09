@@ -47,6 +47,29 @@ public class Main
             }
         }while(!isValidInput);
 
+        //multi-dimensional array example
+
+        System.out.println("\nMulti-Dimensional Array example");
+        int rows = 8;
+        int cols = 8;
+        float [][] board = new float[rows][cols];
+
+        for (int x = 0; x < rows; x++)
+        {
+            for (int y = 0; y < cols; y++)
+            {
+                board[x][y] = (float)(Math.random() * 100.0) + 1.0f;
+            }
+        }
+        System.out.println("Showing 10 random values: ");
+        for (int i = 0; i < 10; i++)
+        {
+            var randRows = (int)(Math.random() * rows);
+            var randCols = (int)(Math.random() * cols);
+            System.out.print("For rows: " + randRows + " cols: " + randCols + " ");
+            System.out.printf("The random number is: %.2f \n", board[randRows][randCols]);
+        }
+
         //Output
         System.out.println();
         System.out.printf("You entered:  %s \n", name);
